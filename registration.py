@@ -1,0 +1,112 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'registration.ui'
+#
+# Created by: PyQt5 UI code generator 5.11.3
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(808, 578)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.tableWidget = QtWidgets.QTableWidget(self.centralwidget)
+        self.tableWidget.setGeometry(QtCore.QRect(0, 100, 801, 451))
+        self.tableWidget.setObjectName("tableWidget")
+        self.tableWidget.setColumnCount(8)
+        self.tableWidget.setRowCount(1)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(5, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(6, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(7, item)
+        self.label_9 = QtWidgets.QLabel(self.centralwidget)
+        self.label_9.setGeometry(QtCore.QRect(20, 0, 641, 31))
+        font = QtGui.QFont()
+        font.setFamily("Century Schoolbook")
+        font.setPointSize(26)
+        font.setBold(True)
+        font.setUnderline(True)
+        font.setWeight(75)
+        self.label_9.setFont(font)
+        self.label_9.setObjectName("label_9")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(20, 60, 47, 13))
+        self.label.setObjectName("label")
+        self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit.setGeometry(QtCore.QRect(60, 60, 361, 20))
+        self.lineEdit.setObjectName("lineEdit")
+        self.add_button = QtWidgets.QPushButton(self.centralwidget)
+        self.add_button.setGeometry(QtCore.QRect(430, 60, 75, 23))
+        self.add_button.setObjectName("add_button")
+        self.edit_button = QtWidgets.QPushButton(self.centralwidget)
+        self.edit_button.setGeometry(QtCore.QRect(510, 60, 75, 23))
+        self.edit_button.setObjectName("edit_button")
+        self.delete_button = QtWidgets.QPushButton(self.centralwidget)
+        self.delete_button.setGeometry(QtCore.QRect(590, 60, 75, 23))
+        self.delete_button.setObjectName("delete_button")
+        self.lcdNumber = QtWidgets.QLCDNumber(self.centralwidget)
+        self.lcdNumber.setGeometry(QtCore.QRect(700, 30, 64, 51))
+        self.lcdNumber.setObjectName("lcdNumber")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "REGISTRATION"))
+        item = self.tableWidget.verticalHeaderItem(0)
+        item.setText(_translate("MainWindow", "1"))
+        item = self.tableWidget.horizontalHeaderItem(0)
+        item.setText(_translate("MainWindow", "PLate Number"))
+        item = self.tableWidget.horizontalHeaderItem(1)
+        item.setText(_translate("MainWindow", "Mark"))
+        item = self.tableWidget.horizontalHeaderItem(2)
+        item.setText(_translate("MainWindow", "Model"))
+        item = self.tableWidget.horizontalHeaderItem(3)
+        item.setText(_translate("MainWindow", "Colour"))
+        item = self.tableWidget.horizontalHeaderItem(4)
+        item.setText(_translate("MainWindow", "Year"))
+        item = self.tableWidget.horizontalHeaderItem(5)
+        item.setText(_translate("MainWindow", "Owner Name"))
+        item = self.tableWidget.horizontalHeaderItem(6)
+        item.setText(_translate("MainWindow", "Owner CNI"))
+        item = self.tableWidget.horizontalHeaderItem(7)
+        item.setText(_translate("MainWindow", "Phone"))
+        self.label_9.setText(_translate("MainWindow", "LIST OF DATA IN THE DATABASE"))
+        self.label.setText(_translate("MainWindow", "Search"))
+        self.add_button.setText(_translate("MainWindow", "ADD"))
+        self.edit_button.setText(_translate("MainWindow", "Edit"))
+        self.delete_button.setText(_translate("MainWindow", "Delete"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
+

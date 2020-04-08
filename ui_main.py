@@ -1,0 +1,120 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'main.ui'
+#
+# Created by: PyQt5 UI code generator 5.11.3
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(1087, 721)
+        MainWindow.setStyleSheet("QMainWindow {\n"
+"    background-color: rgb(229, 248, 255);\n"
+"}")
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.exploreButton = QtWidgets.QToolButton(self.centralwidget)
+        self.exploreButton.setGeometry(QtCore.QRect(860, 30, 121, 31))
+        self.exploreButton.setObjectName("exploreButton")
+        self.result = QtWidgets.QGroupBox(self.centralwidget)
+        self.result.setGeometry(QtCore.QRect(660, 420, 421, 80))
+        self.result.setObjectName("result")
+        self.result_label = QtWidgets.QLabel(self.result)
+        self.result_label.setGeometry(QtCore.QRect(30, 20, 291, 51))
+        font = QtGui.QFont()
+        font.setPointSize(24)
+        font.setBold(True)
+        font.setWeight(75)
+        self.result_label.setFont(font)
+        self.result_label.setText("")
+        self.result_label.setObjectName("result_label")
+        self.launch_button = QtWidgets.QPushButton(self.centralwidget)
+        self.launch_button.setGeometry(QtCore.QRect(60, 630, 101, 31))
+        self.launch_button.setStyleSheet("background-color: rgb(0, 255, 127);")
+        self.launch_button.setObjectName("launch_button")
+        self.execute_button = QtWidgets.QPushButton(self.centralwidget)
+        self.execute_button.setGeometry(QtCore.QRect(170, 630, 75, 31))
+        self.execute_button.setStyleSheet("background-color: rgb(255, 0, 0);")
+        self.execute_button.setObjectName("execute_button")
+        self.list_data_button = QtWidgets.QPushButton(self.centralwidget)
+        self.list_data_button.setGeometry(QtCore.QRect(990, 30, 81, 31))
+        self.list_data_button.setObjectName("list_data_button")
+        self._amount = QtWidgets.QLabel(self.centralwidget)
+        self._amount.setGeometry(QtCore.QRect(750, 100, 321, 91))
+        font = QtGui.QFont()
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self._amount.setFont(font)
+        self._amount.setObjectName("_amount")
+        self.label_image = QtWidgets.QLabel(self.centralwidget)
+        self.label_image.setGeometry(QtCore.QRect(26, 22, 601, 601))
+        self.label_image.setFrameShape(QtWidgets.QFrame.Box)
+        self.label_image.setObjectName("label_image")
+        self.lcdNumber_amount = QtWidgets.QLCDNumber(self.centralwidget)
+        self.lcdNumber_amount.setGeometry(QtCore.QRect(740, 202, 341, 101))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lcdNumber_amount.setFont(font)
+        self.lcdNumber_amount.setObjectName("lcdNumber_amount")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1087, 21))
+        self.menubar.setObjectName("menubar")
+        self.menuFile = QtWidgets.QMenu(self.menubar)
+        self.menuFile.setObjectName("menuFile")
+        self.menuHelp = QtWidgets.QMenu(self.menubar)
+        self.menuHelp.setObjectName("menuHelp")
+        self.menu = QtWidgets.QMenu(self.menubar)
+        self.menu.setObjectName("menu")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+        self.actionNew = QtWidgets.QAction(MainWindow)
+        self.actionNew.setObjectName("actionNew")
+        self.actionExit = QtWidgets.QAction(MainWindow)
+        self.actionExit.setObjectName("actionExit")
+        self.menuFile.addAction(self.actionNew)
+        self.menuFile.addSeparator()
+        self.menuFile.addAction(self.actionExit)
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuHelp.menuAction())
+        self.menubar.addAction(self.menu.menuAction())
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "VNPR"))
+        self.exploreButton.setText(_translate("MainWindow", "LOAD AND EXECUTE"))
+        self.result.setTitle(_translate("MainWindow", "Result"))
+        self.launch_button.setText(_translate("MainWindow", "Launch Camera"))
+        self.execute_button.setText(_translate("MainWindow", "Execute"))
+        self.list_data_button.setText(_translate("MainWindow", "LIST DATA"))
+        self._amount.setText(_translate("MainWindow", "AMOUNT TO PAY:"))
+        self.label_image.setText(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
+        self.menuFile.setTitle(_translate("MainWindow", "File"))
+        self.menuHelp.setTitle(_translate("MainWindow", "Help"))
+        self.menu.setTitle(_translate("MainWindow", "?"))
+        self.actionNew.setText(_translate("MainWindow", "New"))
+        self.actionExit.setText(_translate("MainWindow", "Exit"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
+
